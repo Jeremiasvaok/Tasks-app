@@ -10,8 +10,11 @@ const getTasks = async (req,res)=>{
         })
         const mapp = tasks.map((e)=>{
             return {
+                id: e.id,
                 title: e.title,
-                description:e.description
+                description:e.description,
+                done:e.done,
+                createdAt:e.createdAt
             }
         });
         if(tasks.length === 0){

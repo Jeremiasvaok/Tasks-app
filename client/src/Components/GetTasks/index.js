@@ -13,18 +13,20 @@ export default function GetTasks(){
     return(
         <div>
         {!tasks.length > 0 ? (<div>
-        <h1>No hay tareas pendientes</h1>
+           <h1>No hay tareas pendientes</h1>
         </div>) :
             tasks && tasks.map((e)=>{
                 return (
-                  <div>
-                  <Card  
-                   key={e.id}
-                   title={e.title}
-                   description={e.description}
-                  />
-                </div>  
-                )})
-        }
-        </div>)
+            <div key={e.id}>
+                <Card
+                id={e.id}
+                title={e.title}
+                description={e.description}
+                done={e.done}
+                createdAt={e.createdAt}
+                />
+            </div>  
+        )})
+    }
+</div>)
 }
