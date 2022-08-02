@@ -10,7 +10,7 @@ const getTasks = async (req,res)=>{
         })
         const mapp = tasks.map((e)=>{
             return {
-                titulo: e.title,
+                title: e.title,
                 description:e.description
             }
         });
@@ -60,15 +60,11 @@ const updateTasks = async (req,res)=>{
 const createTasks = async(req,res)=>{
     try {
         const {title, description} = req.body
-        if(title && description){
-    let creaTasks = await Tasks.create({
+      let creaTasks = await Tasks.create({
         title,
         description
     })
     return res.status(201).json({creaTasks});
-}else{
-    res.status(404).send('no se pudo crear la tarea')
-}
     } catch (error) {
         return res.status(500).json({menssage: error.menssage})
     }

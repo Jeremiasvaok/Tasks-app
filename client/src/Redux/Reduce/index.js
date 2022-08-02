@@ -2,7 +2,7 @@ import { CREATE_TASKS, GET_TASKS} from "../Action";
 
 const initialState={
   getTasks: [],
-  createTasks:{},
+  createTasks:[],
 };
 function rootReducer(state= initialState, action){
     switch (action.type) {

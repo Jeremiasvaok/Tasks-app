@@ -12,9 +12,10 @@ export default function GetTasks(){
     }, [dispatch])
     return(
         <div>
-            <h1>hello</h1>
-        {
-            tasks && tasks?.map((e)=>{
+        {!tasks.length > 0 ? (<div>
+        <h1>No hay tareas pendientes</h1>
+        </div>) :
+            tasks && tasks.map((e)=>{
                 return (
                   <div>
                   <Card  
