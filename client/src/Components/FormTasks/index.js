@@ -1,16 +1,34 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { createTasks } from '../../Redux/Action'
+import { createTasks, getTask} from '../../Redux/Action'
 import { useNavigate} from "react-router-dom";
-
+import { useParams } from 'react-router-dom';
 
 export default function CreateTasks(){
+  const params = useParams()
+
   const dispatch = useDispatch()
+
   let navigate = useNavigate();
+    // const[tasks, setTasks] = useState({
+    //   title: '',
+    //   description: ''
+    // })
     const[input, setInput] = useState({
         title: '',
         description: '',
     })
+
+   useEffect(()=>{
+    if(params.id){
+    dispatch(getTask(params.id))
+    setInput({
+      title: input.title,
+      description: input.description
+    })
+    }
+   }, [])
+
 
 const handleChange =(e) =>{
   e.preventDefault();
@@ -34,6 +52,7 @@ const handleChange =(e) =>{
 
   return(
     <div>
+      <h1>{ params.id ? "Edit tasks" : "Create tasks"}</h1>
       <form onSubmit={(e)=> handleSubmit(e)}>
         <label>Title</label>
          <input 
