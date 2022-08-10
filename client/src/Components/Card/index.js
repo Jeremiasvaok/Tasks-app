@@ -4,6 +4,7 @@ import { deleteTasks, deleteTasksCard } from '../../Redux/Action';
 import { useNavigate } from 'react-router-dom';
 import '../Card/Card.css'
 
+
 export default function Card({title, description, done, createdAt, id}){
    
     const dispatch = useDispatch()
@@ -20,7 +21,6 @@ export default function Card({title, description, done, createdAt, id}){
               <button onClick={()=> navegate(`/edit/${id}`)}>Edit</button>
               <h5 className="card-title">{title}</h5>
               <p className="card-text">{description}</p>
-              <span>{done === 1 ? '✔️' : '🕐' }</span>
               <span>{createdAt}</span>
         </div>
     )

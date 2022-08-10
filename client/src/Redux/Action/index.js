@@ -1,10 +1,12 @@
 import axios from 'axios'
-export const  CREATE_TASKS = 'CREATE_TASKS';
+export const CREATE_TASKS = 'CREATE_TASKS';
 export const GET_TASKS = 'GET_TASKS'
 export const DELETE_TASKS = 'DELETE_TASKS'
 export const DELETE_TASKS_CARDS = 'DELETE_TASKS_CARDS'
 export const UPDATE_TASKS = 'UPDATE_TASKS'
 export const GET_TASK = 'GET_TASK'
+
+
 
 export const createTasks = (tasks) => async(dispatch) => {
     try {
@@ -50,18 +52,19 @@ export const deleteTasksCard = id => (dispatch) =>{
       payload: id
     })
   } catch (error) {
+    console.log(error)
   }
 }
 
-export const updateTasks = (tasks) => async(dispatch) =>{
+export const updateTasks = (id, tasks) => async(dispatch) =>{
   try {
-    let {response} = await axios.put('http://localhost:3001/tasks', tasks)
+    let {response} = await axios.put(`http://localhost:3001/tasks/${id}`, tasks)
     dispatch({
       type: UPDATE_TASKS,
       payload: response
     })
   } catch (error) {
-    
+    console.log(error)
   }
 }
 
@@ -73,6 +76,6 @@ export const getTask = (id) => async(dispatch) =>{
       payload: response
     })
   } catch (error) {
-    
+    console.log(error)
   }
 }

@@ -1,9 +1,11 @@
-import { CREATE_TASKS, GET_TASKS, DELETE_TASKS, DELETE_TASKS_CARDS} from "../Action";
+import { CREATE_TASKS, GET_TASKS, DELETE_TASKS, DELETE_TASKS_CARDS, GET_TASK, } from "../Action";
 
 const initialState={
   getTasks: [],
   createTasks:{},
-  deleteTasks:[]
+  deleteTasks:[],
+  getTask:[],
+
 };
 function rootReducer(state= initialState, action){
     switch (action.type) {
@@ -27,7 +29,11 @@ function rootReducer(state= initialState, action){
                 ...state,
             getTasks: state.getTasks.filter(t => t.id !== action.payload)
              }
-
+        case GET_TASK:
+            return{
+                ...state,
+              getTask: action.payload
+            }
         default:
         return state
     }

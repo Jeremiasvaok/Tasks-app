@@ -65,7 +65,8 @@ const createTasks = async(req,res)=>{
         const {title, description} = req.body
       let creaTasks = await Tasks.create({
         title,
-        description
+        description,
+        done : 0
     })
     return res.status(201).json({creaTasks});
     } catch (error) {
