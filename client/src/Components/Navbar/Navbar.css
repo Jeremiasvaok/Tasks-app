@@ -1,0 +1,60 @@
+.Link{
+ text-decoration: none;
+}
+.nav {
+    width: 1116px;
+    height: 100px;
+    margin-left: 125px;
+    margin-top: 31px; 
+    background: #8A92D6;
+    border-radius: 14px;
+}
+.titulo1{
+width: 105px;
+height: 36px;
+margin-left:165px;
+display: inline;
+font-family: 'Grandstander';
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+line-height: 36px;
+/* identical to box height */
+
+text-align: center;
+
+color: #000000;
+}
+
+.titulo2{
+    width: 152px;
+    height: 38px;
+    display: inline;
+    margin-left: 200px;
+    margin-top: 4px;
+    font-family: 'Grandstander';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 36px;
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+    
+}
+.titulo3{
+    width: 221px;
+    height: 36px;
+    display: inline;
+    margin-left: 200px;
+    margin-top: 4px;
+    font-family: 'Grandstander';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 36px;
+    text-decoration: none;
+    text-align: center;
+    
+    color: #000000;
+}

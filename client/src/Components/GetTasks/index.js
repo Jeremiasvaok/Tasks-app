@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from "react-redux"
 import { getTasks } from "../../Redux/Action"
 import Navbar from "../Navbar"
 import Card from "../Card"
+import img from '../../image/Vector.png'
+import '../GetTasks/GetTasks.css'
 
 export default function GetTasks(){
     let dispatch = useDispatch()
@@ -30,5 +32,6 @@ export default function GetTasks(){
             </div>  
         )})
     }
-</div>)
+</div>
+)
 }

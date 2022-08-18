@@ -1,3 +1,37 @@
+body{
+    
+background: #4754C8;
+}
 .card{
-    max-width: 18rem;
+    width: 250px;
+    height: 221px;
+    padding-left: 28px;
+    background: #8A92D6;
+    border-radius: 10px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 31px;
+
+}
+.botonn1{
+    width: 67px;
+    height: 28px;
+    background: #5B63A5;
+    margin-left:12px;
+    border: none;
+}
+.botonn2{
+    width: 67px;
+    height: 28px;
+    background: #5B63A5;
+    margin-left:12px;
+    border: none;
+}
+.botonn1:hover, .botonn2:hover{
+    background-color:  #434b8d;
+}
+.contenedor-botones{
+display: flex;
+margin-left:12px;
+
 }

@@ -34,11 +34,11 @@ export const getTasks = () => async(dispatch)=>{
 
 export const deleteTasks = (id) => async (dispatch) =>{
   try {
-    let response= await axios.delete(`http://localhost:3001/taskss/${id}`)
+    let {response}= await axios.delete(`http://localhost:3001/taskss/${id}`)
     console.log(response)
     dispatch({
       type: DELETE_TASKS,
-      payload: response.data
+      payload: response
     })
   } catch (error) {
     console.log(error)

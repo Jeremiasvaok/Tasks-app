@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
+import { Link } from 'react-router-dom';
 import { createTasks, getTask, updateTasks} from '../../Redux/Action'
 import { useNavigate } from "react-router-dom";
 import { useParams } from 'react-router-dom';
 import { Form, Formik } from 'formik'
+import swal from 'sweetalert'
 
 export default function CreateTasks() {
   const taks = useSelector((state) => state.getTask)
@@ -28,26 +30,6 @@ export default function CreateTasks() {
   loadTasks()
   }, [])
 
-
-  // const handleChange =(e) =>{
-  //   e.preventDefault();
-  //     setInput(prev => ({...prev, [e.target.name]: e.target.value})) 
-  // }
-
-  //   const handleSubmit=(e)=>{
-  //     e.preventDefault();
-  //       if(input.title && input.description){
-  //       dispatch(createTasks(input))
-  //       setInput({
-  //         title:'',
-  //         description:''
-  //       })
-  //       alert('Tu tarea fue creada con exito')
-  //       navigate("/tasks")
-  //       }else{
-  //        alert('No se puede completar la solisitud')
-  //       }
-  //     }
   return (
     <div>
       <h1>{params.id ? 'Edit tasks': 'Create tasks'}</h1>
@@ -57,12 +39,20 @@ export default function CreateTasks() {
         onSubmit={(value, action) => {
           if(params.id){
           dispatch(updateTasks(params.id, value))
-          alert('Tu tarea fue modificada con exito')
+          swal({
+            title: "Good job!",
+            text: "tu tarea fue madificada!",
+            icon: "success",
+          });
             action.resetForm()// reseta el input cunado se termina de inviar la info NO ANDA
           }else{
             console.log(value)
           dispatch(createTasks(value))
-           alert('Tu tarea fue creada con exito')
+          swal({
+            title: "Good job!",
+            text: "tu tarea fue creada!",
+            icon: "success",
+          });
            action.resetForm()// reseta el input cunado se termina de inviar la info NO ANDA
           }
 
@@ -79,7 +69,7 @@ export default function CreateTasks() {
               name='title'
               onChange={handleChange}
               value={values.title} // es para limpiar el input NO ANDA
-            />
+            /><br/>
             <label>Description</label>
             <textarea
               type={'text'}
@@ -88,10 +78,11 @@ export default function CreateTasks() {
               placeholder='ingrese una descripcion de la tarea'
               onChange={handleChange}
               value={values.description}
-            ></textarea>
+            ></textarea><br/>
             <button type={'submit'} disabled={isSubmitting} >
               {isSubmitting ? 'Saving...': 'Save'}
-              </button> 
+              </button><br/>
+             <Link to={'/tasks'}><button>Volver</button></Link>
           </Form>
         )}
       </Formik>

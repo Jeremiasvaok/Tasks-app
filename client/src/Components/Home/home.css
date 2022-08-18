@@ -1,0 +1,57 @@
+body{
+    background: #4754C8;
+}
+.titulo{
+    position: absolute;
+    display: inline;
+    padding-left: 557px;
+}
+.tareas-titulo{
+    color: #03093F;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    justify-content: center;
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    text-align: center;
+}
+.img{
+    max-width: 100%;
+    width: 1366px;
+    height: 600px;
+} 
+              
+.contendor-img{
+display: inline;
+} 
+.contenedor_2{
+    padding-left: 434px;
+
+}
+.boton{
+    background: #6C63FF;
+    justify-content: center;
+    align-items: center;
+    width: 451px;
+    height: 49px;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 55px;
+}
+.boton:hover{
+    background:#03093F
+}
+.letra{
+    color: #03093F;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    justify-content: center;
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 30px;
+    text-align: center;
+}
+.letra:hover{
+    color: #6C63FF;
+}
