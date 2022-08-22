@@ -1,0 +1,110 @@
+.tituloh1{
+    position: absolute;
+width: 295px;
+height: 48px;
+left: 536px;
+top: 65px;
+
+font-family: 'Grandstander';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 48px;
+text-align: center;
+color: #000000;
+}
+.contenedor-from{
+width: 1012px;
+height: 504px;
+margin-left: 177px;
+margin-top: 130px;
+background: #5F70FC;
+}
+.label-title{
+width: 147px;
+height: 48px;
+margin-left: 27px;
+font-family: 'Grandstander';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 48px;
+text-align: center;
+color: #000000;  
+
+}
+.label-description{
+width: 147px;
+height: 48px;
+margin-top: 55px;
+padding-left: 55px;
+font-family: 'Grandstander';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 48px;
+/* identical to box height */
+
+text-align: center;
+
+color: #000000;
+}
+.input-title{
+width: 294px;
+height: 50px;
+margin-left: 117px;
+background: #8A92D6;
+}
+.input-descripction{
+    width: 294px;
+    height: 50px;
+    margin-left: 117px;
+    background: #8A92D6;
+}
+.boton-volver{
+width: 180px;
+height: 75px;
+display: inline;
+margin-left: 200px;
+margin-top: 100px;
+border: none;
+background: #5B63A5;
+text-decoration: none;
+font-family: 'Grandstander';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 48px;
+text-align: center;
+color: #FFFFFF;
+}
+.boton-save{
+width: 180px;
+height: 75px;
+margin-left: 250px;
+margin-top: 100px;
+display: inline;
+border: none;
+background: #5B63A5;
+font-family: 'Grandstander';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 48px;
+/* identical to box height */
+
+text-align: center;
+
+color: #FFFFFF;
+}
+.contenedor-botoness{
+    display: flex;
+
+}
+.LINKK{
+    display: inline;
+}
+
+.boton-save:hover , .boton-volver:hover{
+    background: #464fa0;
+}
