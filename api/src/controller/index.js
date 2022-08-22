@@ -3,7 +3,7 @@ const { Tasks } = require('../db')
 
 const getTasks = async (req,res)=>{
     try {
-        const tasks = await Tasks.findAll({
+        const tasks = await Tasks.findAll({ 
             order:[
                 ["createdAt", "DESC"]
             ]
@@ -32,7 +32,7 @@ const getTask = async (req,res)=>{
         const {id} = req.params
             let tasks = await Tasks.findByPk(id)
           if(!tasks){
-        res.status(404).send(`No se ha encontrado la tarea con el id: ${id}`)
+          res.status(404).send(`No se ha encontrado la tarea con el id: ${id}`)
           }else{
         res.status(200).send(tasks)
           }  
