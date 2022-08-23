@@ -1,4 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.css';
 import { useDispatch } from 'react-redux';
 import { deleteTasks, deleteTasksCard } from '../../Redux/Action';
 import { useNavigate } from 'react-router-dom';
@@ -29,7 +28,6 @@ export default function Card({ title, description, createdAt, id }) {
           swal(" ¡Tu tarea está a salvo! ");
         }
       });
-
   }
 
   return (
@@ -42,8 +40,6 @@ export default function Card({ title, description, createdAt, id }) {
         <h5 className="card-title">{title}</h5>
         <p className="card-text">{description}</p>
         <span>{createdAt}</span>
-      </div>
-      <div>
       </div>
    </>
   )
